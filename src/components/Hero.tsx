@@ -3,15 +3,20 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2000"
-          alt="Modern Architecture"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-60"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" />
       </div>
 
